@@ -1,5 +1,10 @@
 # Fake News Detection
 
+[![CI](https://github.com/shxamill/fake_news_detection/actions/workflows/ci.yml/badge.svg)](https://github.com/shxamill/fake_news_detection/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+> [!IMPORTANT]
+> **Archived.** This is an earlier copy of the project. The maintained version, with the same classifier and Streamlit app in a cleaner layout, is **[shxamill/fake_news](https://github.com/shxamill/fake_news)**.
+
 An educational fake-news classification project with a Streamlit demo, serialized scikit-learn model artifacts, and Jupyter notebooks for preprocessing and model training.
 
 ## What is included
@@ -99,4 +104,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [CODE_OF_CON
 
 ## License
 
-No repository-level open-source license is currently provided. Do not assume that public availability grants permission to reuse or redistribute the code, model artifacts, or datasets.
+This project is licensed under the [MIT License](LICENSE).
