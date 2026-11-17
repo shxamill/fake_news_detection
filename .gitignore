@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Training data is expected locally and is not included
+/Fake-News-Detection1-main/Fake-News-Detection1-main/data/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
