@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python-check:
+    name: Python and notebook structure checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile Streamlit application
+        run: python -m compileall -q Fake-News-Detection1-main/Fake-News-Detection1-main/app
+      - name: Validate notebook JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for notebook in Path("Fake-News-Detection1-main/Fake-News-Detection1-main/notebooks").glob("*.ipynb"):
+              with notebook.open(encoding="utf-8") as handle:
+                  data = json.load(handle)
+              if data.get("nbformat") != 4 or not isinstance(data.get("cells"), list):
+                  raise SystemExit(f"Invalid notebook structure: {notebook}")
+              print(f"Valid notebook: {notebook}")
+          PY
