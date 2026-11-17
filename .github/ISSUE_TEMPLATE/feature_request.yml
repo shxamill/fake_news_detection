@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an improvement to the application or ML workflow.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Problem or user need
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Evaluation and data considerations
+      description: How could this be tested, and what dataset or model risks might it introduce?
+    validations:
+      required: false
